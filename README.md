@@ -1,6 +1,6 @@
 # Random Chart Generator
 
-> 본 프로젝트는 Angular 와 PrimeNG, Chart.js 를 통해 스터디를 정리한 내용입니다.
+> 본 프로젝트는 랜덤하게 Angular 와 PrimeNG, Chart.js 를 통해 랜덤하게 차트를 생성하게 만들었습니다.
 
 ---
 
