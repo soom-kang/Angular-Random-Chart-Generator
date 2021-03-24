@@ -1,0 +1,40 @@
+<div class="list">
+  <div>
+    <p-table
+      [value]="memos"
+      selectionMode="single"
+      [rowHover]="true"
+      (onRowSelect)="onRowSelect($event)"
+    >
+      <ng-template pTemplate="header">
+        <tr>
+          <th>
+            <button
+              pButton
+              pRipple
+              class="p-button-sm p-button-warning p-button-raised"
+              label="ADD RANDOM CHART"
+              icon="pi pi-plus"
+              (click)="clickListItem($event)"
+            ></button>
+          </th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-memos>
+        <!-- <tr class="list-tbody-row" (click)="clickListItem($event)"> -->
+        <tr class="list-tbody-row" [pSelectableRow]="memos">
+          <td pRipple class="styled-box-orange" data-id="{{ memos.id }}">
+            <p-avatar
+              icon="pi pi-user"
+              styleClass="p-mr-2"
+              shape="circle"
+              [style]="{ 'background-color': '#ffc106', color: '#ffffff' }"
+            ></p-avatar>
+            <span>{{ memos.title }}</span>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

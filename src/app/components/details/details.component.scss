@@ -1,0 +1,11 @@
+@import "../../scss/mixin.scss";
+
+.details {
+  margin: 0 50px;
+
+  &-title {
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+}

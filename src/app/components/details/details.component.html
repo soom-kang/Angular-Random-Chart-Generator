@@ -1,0 +1,35 @@
+<div class="details">
+  <div>
+    <div *ngIf="memoDetail">
+      <p-panel>
+        <ng-template pTemplate="header">
+          <button
+            pButton
+            pRipple
+            class="p-button-sm p-button-warning p-button-raised"
+            label="BACK"
+            icon="pi pi-angle-left"
+            (click)="goBack()"
+          ></button>
+        </ng-template>
+
+        <div class="details-title">
+          {{ memoDetail.title }}
+        </div>
+
+        <div>
+          <p>{{ memoDetail.content }}</p>
+        </div>
+
+        <ng-template pTemplate="footer">
+          <p-chart
+            [type]="memoDetail.chartType"
+            [data]="memoDetail.chartData"
+          ></p-chart>
+        </ng-template>
+      </p-panel>
+    </div>
+  </div>
+
+  <p-toast position="bottom-center" key="bc"></p-toast>
+</div>

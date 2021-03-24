@@ -1,0 +1,25 @@
+@import "../../scss/mixin.scss";
+
+:host ::ng-deep .list {
+  margin: 0 50px;
+  margin-bottom: 100px;
+  border: 1px solid var(--surface-300);
+  border-bottom: 0;
+  @include flexSet("center", "center");
+
+  &-tbody-row {
+    cursor: pointer;
+
+    > td {
+      > span {
+        margin-left: 10px;
+      }
+    }
+
+    .styled-box-orange {
+      .p-ink {
+        background: rgba(#ffc106, 0.3);
+      }
+    }
+  }
+}

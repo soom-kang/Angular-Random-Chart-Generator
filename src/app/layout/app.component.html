@@ -1,0 +1,16 @@
+<header class="title" (click)="goHome()">
+  <button
+    pButton
+    pRipple
+    label="{{ title }}"
+    icon="pi pi-chart-bar"
+    type="button"
+    class="p-button-warning p-button-text styled-box-orange p-button-lg"
+    (click)="clickTitle()"
+  ></button>
+</header>
+<p-toast></p-toast>
+
+<section id="main">
+  <router-outlet></router-outlet>
+</section>

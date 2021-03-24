@@ -1,0 +1,63 @@
+<div class="memo">
+  <div>
+    <p-panel>
+      <ng-template pTemplate="header">
+        <button
+          pButton
+          pRipple
+          class="p-button-sm p-button-warning p-button-raised"
+          label="BACK"
+          icon="pi pi-angle-left"
+          (click)="goBack()"
+        ></button>
+      </ng-template>
+
+      <form class="p-formgroup">
+        <div class="p-field">
+          <span class="p-float-label">
+            <input
+              id="float-input"
+              type="text"
+              pInputText
+              [(ngModel)]="title"
+              [ngClass]="isTitleValid"
+              name="title"
+              pTooltip="Enter Chart Title"
+              required
+            />
+            <label for="float-input">Title</label>
+          </span>
+        </div>
+
+        <div class="p-field">
+          <span class="p-float-label">
+            <textarea
+              id="float-textarea"
+              [rows]="10"
+              [cols]="60"
+              [(ngModel)]="content"
+              name="content"
+              pInputTextarea
+              [ngClass]="isContentValid"
+              pTooltip="Descript Chart Details"
+              required
+            ></textarea>
+            <label for="float-textarea">Content</label>
+          </span>
+        </div>
+        <div class="p-field">
+          <button
+            pButton
+            pRipple
+            class="p-button-sm p-button-warning p-button-raised"
+            type="submit"
+            label="GENERATE"
+            icon="pi pi-check"
+            (click)="handleSubmit($event)"
+          ></button>
+        </div>
+      </form>
+    </p-panel>
+  </div>
+  <p-toast position="bottom-center" key="bc"></p-toast>
+</div>

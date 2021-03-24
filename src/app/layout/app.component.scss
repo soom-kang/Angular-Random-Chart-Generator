@@ -1,0 +1,22 @@
+@import "../scss/mixin.scss";
+
+.title {
+  height: 180px;
+  background: var(--surface-50);
+
+  @include flexSet("center", "center");
+
+  > h1 {
+    color: var(--yellow-500);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .styled-box-orange {
+    .p-ink {
+      background: rgba(#ffc106, 0.3);
+    }
+  }
+}
