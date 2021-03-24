@@ -6,7 +6,7 @@
 
 ## 프로젝트 소개
 
-1. 본 프로젝트는 `Angular2`, `PrimeNG`,`TypeScript`, `Scss`, `chart.js` 를 통해 구성했습니다.
+1. 본 프로젝트는 `Angular`, `PrimeNG`,`TypeScript`, `Scss`, `chart.js` 를 통해 구성했습니다.
 
 2. `/` 페이지에는 각 차트 타이틀이 리스트로 보입니다.
 
