@@ -1,10 +1,10 @@
 {
-  "name": "angular-board",
+  "name": "angular-random-chart-generator",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "rm -rf dist && ng build",
+    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
