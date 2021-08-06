@@ -1,26 +1,30 @@
-# Random Chart Generator
+<h3 align="center"> 
+  Angular Random Chart Generator
+</h3>
 
-> 본 프로젝트는 Angular 와 PrimeNG, Chart.js 를 통해 랜덤하게 차트를 생성하게 만들었습니다.
+<h4 align="center">
+  <a href="https://angular-random-chart-generator.vercel.app/">View Demo</a>
+</h4>
 
 ---
 
-## 프로젝트 소개
+<img src="https://user-images.githubusercontent.com/4216651/112336145-2aa67300-8d00-11eb-9c4f-860c6da0b019.png" alt="chart-introduction" width="100%"/>
 
-1. 본 프로젝트는 `Angular`, `PrimeNG`,`TypeScript`, `Scss`, `chart.js` 를 통해 구성했습니다.
+|                                                               List                                                               |                                                            Writing                                                             |
+| :------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+| ![randomlist-introduction](https://user-images.githubusercontent.com/4216651/112343734-c0dd9780-8d06-11eb-9aa7-eab70a4ff555.gif) | ![generate-introduction](https://user-images.githubusercontent.com/4216651/112344228-3ba6b280-8d07-11eb-91ed-2efe7e509576.gif) |
 
-2. `/` 페이지에는 각 차트 타이틀이 리스트로 보입니다.
+## About The Project
 
-3. `/memo` 페이지는 타이틀과 내용을 입력하여 랜덤하게 차트를 생성합니다.
+1.  `/` 페이지에는 각 차트 타이틀이 리스트로 보입니다.
 
-4. `/room/:id` `id`는 랜덤하고 중복되지 않는 `string`이며 각각 리스트의 상세 페이지가 표시됩니다.
+2.  `/memo` 페이지는 타이틀과 내용을 입력하여 랜덤하게 차트를 생성합니다.
 
-5. 메인화면 리스트의 타이틀과 컨텐츠는 `https://jsonplaceholder.typicode.com/`의 `API`를 이용해 `AJAX`를 요청했습니다.
+3.  `/room/:id` `id`는 랜덤하고 중복되지 않는 `string`이며 각각 리스트의 상세 페이지가 표시됩니다.
 
-#### 화면 예시
+4.  메인화면 리스트의 타이틀과 컨텐츠는 `https://jsonplaceholder.typicode.com/`의 `API`를 이용해 `AJAX`를 요청했습니다.
 
-![image](https://user-images.githubusercontent.com/4216651/112336145-2aa67300-8d00-11eb-9c4f-860c6da0b019.png)
-
-### 페이지별 소개
+### View Details
 
 ### `/`
 
@@ -42,45 +46,61 @@
 - 차트는 종류, 키, 값 모두 랜덤하게 결정됩니다.
 - 좌상단의 `BACK` 버튼을 클릭하면 `/`로 이동합니다.
 
-#### 차트 종류
+#### Chart List
 
 - `bar`, `doughnut`, `pie`, `line`, `radar`, `polarArea`
 
 ![image](https://user-images.githubusercontent.com/4216651/112339792-570fbe80-8d03-11eb-9f0a-a6e22ad6ea25.png)
 
-#### 프리뷰
+### Built With
 
-- 리스트
+- Angular
 
-![randomlist](https://user-images.githubusercontent.com/4216651/112343734-c0dd9780-8d06-11eb-9aa7-eab70a4ff555.gif)
+- TypeScript
 
-- 작성
+- SCSS
 
-![fine](https://user-images.githubusercontent.com/4216651/112344228-3ba6b280-8d07-11eb-91ed-2efe7e509576.gif)
+- PrimeNG
 
-## 프로젝트 실행
+- Chart.js
 
-### 설치
+## Getting Started
 
-1. 폴더 안에서 `npm install` 로 설치합니다.
+### Prerequisites
 
-```console
-$ npm install
+Before you start, install `Yarn` package to global.
+
+```sh
+npm install --global yarn
 ```
 
-### 실행 (로컬)
+### Installation
 
-1. 폴더 안에서 `npm run serve` 로 실행합니다.
+1.  Clone the repo
 
-```console
-// 실행
-$ npm start
+    ```sh
+    git clone https://github.com/VannsKang/Angular-Random-Chart-Generator.git
+    ```
 
-// 빌드
-$ npm run build
-```
+2.  Install NPM packages
 
-## 프로젝트 모듈 구조
+    ```sh
+    yarn install
+    ```
+
+3.  Run the project
+
+    ```sh
+    yarn start
+    ```
+
+4.  Build the package
+
+    ```sh
+    yarn build
+    ```
+
+## Project Tree
 
 ```js
 .
@@ -162,7 +182,7 @@ $ npm run build
 
 7. `app/app.module.ts`, `app/customs.module.ts` 에서 모듈 저체를 관리합니다.
 
-## 설치 패키지
+## NPM Packages
 
 #### package.json
 
@@ -211,6 +231,16 @@ $ npm run build
 2. `primeng` 및 `chart.js` 를 통해 디자인을 적용하였습니다.
 3. `lodash`를 통해 필요 로직을 간단하게 구현하였습니다.
 
-## 기타 참고 사항
+## ETC
 
-> - 본 프로젝트는 크롬에서 테스트를 거쳤습니다.
+This project is obtimized & tested in `Chrome`.
+
+---
+
+<h3 align="center">
+Developed by SOOM
+</h3>
+
+<h4 align="center">
+<a href="https://soomlog.vercel.app/">Soomlog.vercel.app</a>
+</h4>
