@@ -7,6 +7,7 @@ $white: #fff;
 $cool-grey: #a4a6b0;
 $pale-grey: #f9f9fb;
 $black-10: rgba(0, 0, 0, 0.1);
+$desktop-width: 1024px;
 
 // SECTION mixin
 @mixin flexSet($arg...) {
@@ -15,5 +16,17 @@ $black-10: rgba(0, 0, 0, 0.1);
   align-items: #{nth($arg, 2)};
   @if length($arg) == 3 {
     flex-direction: #{nth($arg, 3)};
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
   }
 }

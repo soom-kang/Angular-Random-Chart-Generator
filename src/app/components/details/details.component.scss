@@ -1,7 +1,14 @@
 @import "../../scss/mixin.scss";
 
 .details {
-  margin: 0 50px;
+  @include mobile {
+    margin: 10px;
+  }
+
+  @include desktop {
+    margin: 0 50px;
+    margin-bottom: 100px;
+  }
 
   &-title {
     font-weight: 700;
