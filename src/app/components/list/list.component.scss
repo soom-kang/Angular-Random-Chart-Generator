@@ -1,8 +1,15 @@
 @import "../../scss/mixin.scss";
 
 :host ::ng-deep .list {
-  margin: 0 50px;
-  margin-bottom: 100px;
+  @include tablet {
+    margin: 10px;
+  }
+
+  @include desktop {
+    margin: 0 50px;
+    margin-bottom: 100px;
+  }
+
   border: 1px solid var(--surface-300);
   border-bottom: 0;
   @include flexSet("center", "center");

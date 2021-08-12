@@ -1,11 +1,22 @@
 @import "../../scss/mixin.scss";
 
 .memo {
-  margin: 0 50px;
+  @include tablet {
+    margin: 10px;
+  }
+
+  @include desktop {
+    margin: 0 50px;
+    margin-bottom: 100px;
+  }
 }
 
 .p-field {
   margin: 30px 0;
+}
+
+#float-textarea {
+  width: 100% !important;
 }
 
 :host ::ng-deep {

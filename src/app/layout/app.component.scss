@@ -22,6 +22,12 @@
 }
 
 #main {
-  width: 60%;
-  margin: auto;
+  @include tablet {
+    width: 100%;
+  }
+
+  @include desktop {
+    width: 60%;
+    margin: auto;
+  }
 }
