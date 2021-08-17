@@ -10,11 +10,13 @@
 
 <img src="https://user-images.githubusercontent.com/4216651/112336145-2aa67300-8d00-11eb-9c4f-860c6da0b019.png" alt="chart-introduction" width="100%"/>
 
-|                                                               List                                                               |                                                            Writing                                                             |
-| :------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
-| ![randomlist-introduction](https://user-images.githubusercontent.com/4216651/112343734-c0dd9780-8d06-11eb-9aa7-eab70a4ff555.gif) | ![generate-introduction](https://user-images.githubusercontent.com/4216651/112344228-3ba6b280-8d07-11eb-91ed-2efe7e509576.gif) |
+|                                                                             List                                                                             |                                                                           Write                                                                           |
+| :----------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| <img src="https://user-images.githubusercontent.com/4216651/112343734-c0dd9780-8d06-11eb-9aa7-eab70a4ff555.gif" alt="randomlist-introduction" width="700" /> | <img src="https://user-images.githubusercontent.com/4216651/112344228-3ba6b280-8d07-11eb-91ed-2efe7e509576.gif" alt="generate-introduction" width="690"/> |
 
 ## About The Project
+
+This project is a documentation of study for `Angular` and `Chart.js`.
 
 1.  `/` 페이지에는 각 차트 타이틀이 리스트로 보입니다.
 
@@ -24,7 +26,7 @@
 
 4.  메인화면 리스트의 타이틀과 컨텐츠는 `https://jsonplaceholder.typicode.com/`의 `API`를 이용해 `AJAX`를 요청했습니다.
 
-### View Details
+### Page Details
 
 ### `/`
 
@@ -50,7 +52,7 @@
 
 - `bar`, `doughnut`, `pie`, `line`, `radar`, `polarArea`
 
-![image](https://user-images.githubusercontent.com/4216651/112339792-570fbe80-8d03-11eb-9f0a-a6e22ad6ea25.png)
+<img src="https://user-images.githubusercontent.com/4216651/112339792-570fbe80-8d03-11eb-9f0a-a6e22ad6ea25.png" alt="chart-list" width="100%"/>
 
 ### Built With
 
@@ -233,7 +235,7 @@ npm install --global yarn
 
 ## ETC
 
-This project is obtimized & tested in `Chrome`.
+This project is optimized & tested in `Chrome`.
 
 ---
 
@@ -242,5 +244,5 @@ Developed by SOOM
 </h3>
 
 <h4 align="center">
-<a href="https://soomlog.vercel.app/">Soomlog.vercel.app</a>
+<a href="https://www.soomlog.tech/">Soomlog.tech</a>
 </h4>
