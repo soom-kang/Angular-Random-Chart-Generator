@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "soom-vanns-project": {
+    "angular-toy-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,12 +20,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/soom-vanns-project",
+            "outputPath": "dist/angular-toy-project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": true,
+            "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
@@ -34,53 +34,61 @@
               "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": ["lodash", "chart.js"]
+            "allowedCommonJsDependencies": ["lodash", "Chart.js"]
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
                   "maximumError": "4kb"
                 }
-              ]
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "buildOptimizer": false,
+              "optimization": false,
+              "vendorChunk": true,
+              "extractLicenses": false,
+              "sourceMap": true,
+              "namedChunks": true
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "soom-vanns-project:build"
-          },
           "configurations": {
             "production": {
-              "browserTarget": "soom-vanns-project:build:production"
+              "browserTarget": "angular-toy-project:build:production"
+            },
+            "development": {
+              "browserTarget": "angular-toy-project:build:development"
             }
+          },
+          "defaultConfiguration": "development",
+          "options": {
+            "port": 4500,
+            "host": "0.0.0.0"
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "soom-vanns-project:build"
+            "browserTarget": "angular-toy-project:build"
           }
         },
         "test": {
@@ -90,36 +98,14 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
+            "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": ["src/styles.scss"],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": ["**/node_modules/**"]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "soom-vanns-project:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "soom-vanns-project:serve:production"
-            }
           }
         }
       }
     }
   },
-  "defaultProject": "soom-vanns-project"
+  "defaultProject": "angular-toy-project"
 }

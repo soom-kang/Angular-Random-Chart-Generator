@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Types } from '@/typings';
+import { Types } from '@/types';
 import { DataService } from '@/service/data/data.service';
 
 import * as _ from 'lodash';
@@ -12,11 +12,14 @@ export class ListService {
 
   private newMemo: Types.Memo[] = [];
   private ItemTemplate: Types.Memo = {
-    id: null,
-    title: null,
-    content: null,
-    chartType: null,
-    chartData: null,
+    id: '',
+    title: '',
+    content: '',
+    chartType: '',
+    chartData: {
+      labels: [],
+      datasets: [],
+    },
   };
   private maxMemoCount = Math.ceil(Math.random() * 10) + 5;
   private labels = [
@@ -64,15 +67,13 @@ export class ListService {
     //? generate random Memo
     this.newMemo.forEach(async (item) => {
       item.id = this.generateId();
-      item.title = (await this.generateTitleContent()).title;
-      item.content = (await this.generateTitleContent()).body;
+      item.title = (await this.generateTitleContent())!.title;
+      item.content = (await this.generateTitleContent())!.body;
       item.chartType = this.generateChartType();
       item.chartData = this.generateChartData(item.chartType);
     });
 
     this.memo = this.newMemo;
-
-    // console.log(this.memo);
   }
 
   generateId(): string {

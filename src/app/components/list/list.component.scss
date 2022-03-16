@@ -14,10 +14,15 @@
   border-bottom: 0;
   @include flexSet("center", "center");
 
+  > div {
+    width: 100%;
+  }
+
   &-tbody-row {
     cursor: pointer;
 
     > td {
+      justify-content: flex-start !important;
       > span {
         margin-left: 10px;
       }

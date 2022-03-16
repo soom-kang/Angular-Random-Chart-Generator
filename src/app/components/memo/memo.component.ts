@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 
 import { MemoService, ListService } from '@/service';
 import { MessageService } from 'primeng/api';
-import { Types } from '@/typings';
+import { Types } from '@/types';
 
 @Component({
   selector: 'app-memo',
@@ -42,7 +42,10 @@ export class MemoComponent implements OnInit {
       title: this.title,
       content: this.content,
       chartType: this.listService.generateChartType(),
-      chartData: null,
+      chartData: {
+        labels: [],
+        datasets: [],
+      },
     };
 
     this.showLog();
