@@ -1,10 +1,10 @@
 export namespace Types {
   export interface Memo {
-    id: string | null;
-    title: string | null;
-    content: string | null;
-    chartType: string | null;
-    chartData: ChartData | null;
+    id: string;
+    title: string;
+    content: string;
+    chartType: string;
+    chartData: ChartData;
   }
 
   export interface ChartData {

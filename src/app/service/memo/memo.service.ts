@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ListService } from '@/service/list/list.service';
 
-import { Types } from '@/typings';
+import { Types } from '@/types';
 
 @Injectable({
   providedIn: 'root',
@@ -13,14 +13,17 @@ export class MemoService {
     return this.listService.memo;
   }
 
-  getMemoDetail(id: string | null): Types.Memo {
+  getMemoDetail(id: string): Types.Memo {
     const searchData = this.listService.memo.find((item) => item.id === id);
     const defaultData = {
-      id: null,
+      id: '',
       title: 'No Data ',
       content: 'There is nothing to show ... 👀👀',
-      chartType: null,
-      chartData: null,
+      chartType: '',
+      chartData: {
+        labels: [],
+        datasets: [],
+      },
     };
     return searchData ? searchData : defaultData;
   }

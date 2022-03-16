@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Types } from '@/typings';
+import { Types } from '@/types';
 import { MemoService } from '@/service';
 import { Router } from '@angular/router';
 

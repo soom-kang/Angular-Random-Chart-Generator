@@ -5,7 +5,7 @@ import { Location } from '@angular/common';
 import { MessageService } from 'primeng/api';
 
 import { MemoService } from '@/service';
-import { Types } from '@/typings';
+import { Types } from '@/types';
 
 @Component({
   selector: 'app-details',
@@ -15,11 +15,14 @@ import { Types } from '@/typings';
 })
 export class DetailsComponent implements OnInit {
   memoDetail: Types.Memo = {
-    id: null,
+    id: '',
     title: '',
     content: '',
-    chartType: null,
-    chartData: null,
+    chartType: '',
+    chartData: {
+      labels: [],
+      datasets: [],
+    },
   };
 
   constructor(
@@ -33,6 +36,7 @@ export class DetailsComponent implements OnInit {
   ngOnInit(): void {
     this.route.paramMap.subscribe((resp) => {
       const id = resp.get('id');
+      if (!id) return;
 
       const data = this.memoService.getMemoDetail(id);
       this.memoDetail = data;
